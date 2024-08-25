@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(74, 78, 105);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: rgb(34, 35, 58);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.filter-btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.filter-btn-container button {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: rgb(45, 46, 63);
+    color: white;
+    border: 2px solid transparent;
+    font-weight: 600;
+}
+
+.filter-btn-container button:focus {
+    border: 2px solid white;
+    transition: all 0.2s;
+}
+
+.main-data {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 50vh;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    padding: 1.1px;
+    background: conic-gradient(#0000 10%, white) content-box;
+    -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+        radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 calc(100% - 9px));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: spinner-d55elj 1s infinite steps(10);
+}
+
+@keyframes spinner-d55elj {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.spin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spin-container p {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card{
+    width: 300px;
+    background-color: rgb(42,42,69);
+    border-radius: 5px;
+    color: white;
+}
+
+.card-img{
+    width: 300px;
+    position: relative;
+}
+
+.card-img img{
+    width: 300px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+
+.card-like-btn button{
+    position: absolute;
+    right: 3%;
+    bottom: -9%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-icon{
+    font-size: 1.75rem;
+}
+
+.card-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.card-description{
+    padding: 1rem;
+    padding-top: 0;
+    line-height: 1.5rem;
+}
+
+.error-container p{
+    font-size: 3rem;
+    font-weight: 600;
+}
